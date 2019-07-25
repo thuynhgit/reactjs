@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark mb-4" style="background-color: black">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
+            <ul class="navbar-nav mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Xem danh sách Note</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- end menu tren -->
+    <div class="contain">
+        <div class="row">
+            <div class="col">
+            <div id="noteList" role="tablist" aria-multiselectable="true">
+                <div class="card">
+                    <div class="card-header" role="tab" id="note1">
+                        <h5 class="mb-0">
+                            <a data-toggle="collapse" data-parent="#noteList" href="#section1ContentId" aria-expanded="true" aria-controls="section1ContentId">
+                      Ghi chu ngay 31/03/2018
+                    </a>
+                        </h5>
+                    </div>
+                    <div id="section1ContentId" class="collapse in" role="tabpanel" aria-labelledby="note1">
+                        <div class="card-body">
+                            Section 1 content
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" role="tab" id="note2">
+                        <h5 class="mb-0">
+                            <a data-toggle="collapse" data-parent="#noteList" href="#section2ContentId" aria-expanded="true" aria-controls="section2ContentId">
+                      Ghi chu ngay 01/04/2019
+                    </a>
+                        </h5>
+                    </div>
+                    <div id="section2ContentId" class="collapse in" role="tabpanel" aria-labelledby="note2">
+                        <div class="card-body">
+                            Section 2 content
+                        </div>
+                    </div>
+                </div>
+            </div>    
+            </div>
+            <div class="col-4">
+                <h3>Sua noi dung Note</h3>
+                <div class="form-group">
+                  <label for="noteTitle">Tieu de Note</label>
+                  <input type="text" class="form-control" name="noteTile" id="noteTitle" aria-describedby="helpId" placeholder="Tieu de note">
+                  <small id="helpId" class="form-text text-muted">Dien tieu de vao day</small>
+                </div>
+                <div class="form-group">
+                  <label for="noteContent">Noi dung Note</label>
+                  <textarea type="text" class="form-control" name="noteContent" id="noteContent" aria-describedby="helpId" placeholder="Noi dung note"></textarea>
+                  <small id="helpId" class="form-text text-muted">Dien noi dung vao day</small>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Luu</button>
+            </div>
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
