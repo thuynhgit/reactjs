@@ -38,9 +38,8 @@ router.post('/add', function(req, res, next) {
   pool.query("INSERT INTO product_info (product_name, product_price, image) values ($1, $2, $3)", [product_name, product_price, image], (err,response) => {
     if(err){
       res.send(err);
-      res.send(0);
     }else {
-      res.send(1);
+      res.send('da insert du lieu thanh cong' + product_name + product_price + image);
     }
   })
 });
