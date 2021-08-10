@@ -32,7 +32,7 @@ function TodoList({ todoList, onTodoClick }) {
                 </li>
             ))
             }
-        </ul >
+        </ul>
     );
 }
 

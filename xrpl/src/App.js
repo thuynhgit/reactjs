@@ -1,11 +1,9 @@
-import './App.css';
-
+import Address from "./components/address";
 function App() {
   return (
     <div className="App">
-      <p>
-        By Mr Thuy
-      </p>
+      <Address />
+
     </div>
   );
 }

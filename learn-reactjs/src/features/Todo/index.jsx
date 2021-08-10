@@ -1,46 +1,28 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
+import { Switch, Route, useRouteMatch } from 'react-router-dom';
+import NotFound from '../../components/NotFound';
 // import PropTypes from 'prop-types';
-import TodoList from './components/TodoList';
+// import TodoList from './components/TodoList';
+import DetailPage from './pages/DetailPage';
+import ListPage from './pages/ListPage';
 
-TodoFeature.propTypes = {
-
-};
+TodoFeature.propTypes = {};
 
 function TodoFeature(props) {
-    const initTodoList = [
-        {
-            id: 1,
-            title: 'Eat',
-            status: 'new',
-        },
-        {
-            id: 2,
-            title: 'Sleep',
-            status: 'completed',
-        },
-        {
-            id: 3,
-            title: 'Code',
-            status: 'new',
-        }
-    ];
-    const [todoList, setTodoList] = useState(initTodoList);
-    const handleTodoClick = (todo, idx) => {
-        const newTodoList = [...todoList];
-        console.log(idx);
-        newTodoList[idx] = {
-            ...newTodoList[idx],
-            status: newTodoList[idx].status === 'new' ? 'completed' : 'new',
-        };
-        setTodoList(newTodoList);
-    }
-
-    return (
-        <div>
-            <h3>Todo List</h3>
-            <TodoList todoList={todoList} onTodoClick={handleTodoClick} />
-        </div>
-    );
+  const match = useRouteMatch();
+  return (
+    <div>
+      <Switch>
+        <Route path={match.path} component={ListPage} exact></Route>
+        <Route
+          path={`${match.path}/:todoId`}
+          component={DetailPage}
+          exact
+        ></Route>
+        <Route component={NotFound} />
+      </Switch>
+    </div>
+  );
 }
 
 export default TodoFeature;
